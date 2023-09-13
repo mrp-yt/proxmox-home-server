@@ -1,0 +1,10 @@
+version: '3'
+services:
+  server:
+    image: ghcr.io/gotify/server
+    restart: unless-stopped
+    container_name: Gotify
+    ports:
+      - port-on-the-host:80
+    volumes:
+      - /path/to/folder:/app/data
