@@ -1,0 +1,11 @@
+version: '3.3'
+services:
+  dashy:
+    image: lissy93/dashy:latest
+    container_name: dashy
+    ports:
+      - 'port-on-host:80'
+    volumes:
+      - /pathto//conf.yml:/app/public/conf.yml
+      - /path/to/folder/icons:/app/public/item-icons/icons
+    restart: unless-stopped
